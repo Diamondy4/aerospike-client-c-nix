@@ -24,9 +24,13 @@
         {
           self',
           pkgs,
+          config,
           ...
         }:
         {
+          overlayAttrs = {
+            inherit (config.packages) aerospike-client-c;
+          };
           packages = {
             aerospike-client-c = pkgs.stdenv.mkDerivation {
               pname = "aerospike-client-c";
