@@ -3,35 +3,20 @@
     "aerospike-client-c": {
       "flake": false,
       "locked": {
-        "lastModified": 1675880918,
-        "narHash": "sha256-TtaJ7fIlM36UWs9T3i91MEMUJo0XDCcbKG9hVm72A84=",
-        "rev": "bdd08709ed5be34b634aa69682144986d1ae09b4",
-        "revCount": 3413,
+        "lastModified": 1743445287,
+        "narHash": "sha256-ppho97oRoZXnmR6r28KodPw8vXt/LFN/EF3SgvA96qY=",
+        "ref": "refs/heads/master",
+        "rev": "354a1283c8179cf3dce66c622dad7a77a804e6a2",
+        "revCount": 3570,
         "submodules": true,
         "type": "git",
         "url": "git+ssh://git@github.com/aerospike/aerospike-client-c"
       },
       "original": {
-        "rev": "bdd08709ed5be34b634aa69682144986d1ae09b4",
+        "rev": "354a1283c8179cf3dce66c622dad7a77a804e6a2",
         "submodules": true,
         "type": "git",
         "url": "git+ssh://git@github.com/aerospike/aerospike-client-c"
-      }
-    },
-    "flake-compat": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1673956053,
-        "narHash": "sha256-4gtG9iQuiKITOjNQQeQIpoIB6b16fm+504Ch3sNKLd8=",
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "rev": "35bb57c0c8d8b62bbfd284272c928ceb64ddbde9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "type": "github"
       }
     },
     "flake-parts": {
@@ -39,11 +24,11 @@
         "nixpkgs-lib": "nixpkgs-lib"
       },
       "locked": {
-        "lastModified": 1678379998,
-        "narHash": "sha256-TZdfNqftHhDuIFwBcN9MUThx5sQXCTeZk9je5byPKRw=",
+        "lastModified": 1743550720,
+        "narHash": "sha256-hIshGgKZCgWh6AYJpJmRgFdR3WUbkY04o82X05xqQiY=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "c13d60b89adea3dc20704c045ec4d50dd964d447",
+        "rev": "c621e8422220273271f52058f618c94e405bb0f5",
         "type": "github"
       },
       "original": {
@@ -54,41 +39,38 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1678721247,
-        "narHash": "sha256-08lFCHMaG6WTNbCkVY79IVmvXwZopsOOwhHv+jdi1II=",
+        "lastModified": 1743689281,
+        "narHash": "sha256-y7Hg5lwWhEOgflEHRfzSH96BOt26LaYfrYWzZ+VoVdg=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "fb77124c3f92e5ce9e8a78decaef72edd1ab5bdc",
+        "rev": "2bfc080955153be0be56724be6fa5477b4eefabb",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
     "nixpkgs-lib": {
       "locked": {
-        "dir": "lib",
-        "lastModified": 1678375444,
-        "narHash": "sha256-XIgHfGvjFvZQ8hrkfocanCDxMefc/77rXeHvYdzBMc8=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "130fa0baaa2b93ec45523fdcde942f6844ee9f6e",
+        "lastModified": 1743296961,
+        "narHash": "sha256-b1EdN3cULCqtorQ4QeWgLMrd5ZGOjLSLemfa00heasc=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "e4822aea2a6d1cdd36653c134cacfd64c97ff4fa",
         "type": "github"
       },
       "original": {
-        "dir": "lib",
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
         "aerospike-client-c": "aerospike-client-c",
-        "flake-compat": "flake-compat",
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs"
       }
