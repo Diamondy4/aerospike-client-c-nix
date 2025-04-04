@@ -23,36 +23,36 @@
       perSystem =
         {
           self',
-          config,
           pkgs,
-          lib,
-          system,
           ...
         }:
         {
-          packages.default = pkgs.stdenv.mkDerivation {
-            pname = "aerospike-client-c";
-            version = "7.0.4";
-            src = inputs.aerospike-client-c;
-            buildInputs = with pkgs; [
-              openssl
-              zlib
-              lua
-            ];
-            patchPhase = ''
-              patchShebangs *
-              substituteInPlace modules/lua/makefile \
-                --replace-fail "AR= ar rc" "override AR= ar rc"
-            '';
-            installPhase = ''
-              runHook preInstall
-              shopt -s globstar
-              mkdir -p $out
-              cp -r ./**/include $out
-              cp -r ./**/lib $out
-              cp -r ./**/obj $out
-              runHook postInstall
-            '';
+          packages = {
+            aerospike-client-c = pkgs.stdenv.mkDerivation {
+              pname = "aerospike-client-c";
+              version = "7.0.4";
+              src = inputs.aerospike-client-c;
+              buildInputs = with pkgs; [
+                openssl
+                zlib
+                lua
+              ];
+              patchPhase = ''
+                patchShebangs *
+                substituteInPlace modules/lua/makefile \
+                  --replace-fail "AR= ar rc" "override AR= ar rc"
+              '';
+              installPhase = ''
+                runHook preInstall
+                shopt -s globstar
+                mkdir -p $out
+                cp -r ./**/include $out
+                cp -r ./**/lib $out
+                cp -r ./**/obj $out
+                runHook postInstall
+              '';
+            };
+            default = self'.packages.aerospike-client-c;
           };
         };
     };
