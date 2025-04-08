@@ -29,6 +29,7 @@
           self',
           pkgs,
           config,
+          lib,
           ...
         }:
         {
@@ -56,6 +57,7 @@
                 cp -r ./**/include $out
                 cp -r ./**/lib $out
                 cp -r ./**/obj $out
+                ${lib.getExe pkgs.patchelf} --add-needed ${lib.getLib pkgs.glibc + "/lib/libm.so.6"} $out/lib/libaerospike.so
                 runHook postInstall
               '';
             };
