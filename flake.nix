@@ -14,7 +14,11 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, flake-parts, ... }:
+    inputs@{
+      nixpkgs,
+      flake-parts,
+      ...
+    }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = nixpkgs.lib.systems.flakeExposed;
       imports = [
@@ -39,7 +43,6 @@
               buildInputs = with pkgs; [
                 openssl
                 zlib
-                lua
               ];
               patchPhase = ''
                 patchShebangs *
